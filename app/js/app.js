@@ -5,7 +5,21 @@ require('angular-route');
 var samApp = angular.module('samApp', ['ngAnimate', 'ngRoute']);
 
 
-samApp.controller('HomeController', ['$scope', ($scope) => {
+samApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
+    $locationProvider) {
+
+  $locationProvider.html5Mode(true);
+}])
+
+
+samApp.controller('HomeController', ['$scope', '$location', '$anchorScroll', 
+  ($scope, $location, $anchorScroll) => {
+
+  $scope.goToHash = function(url){
+    $location.hash(url);
+    $anchorScroll();
+  }
+
   $scope.workItems = [
     [{
       name: 'Major A',
@@ -37,57 +51,27 @@ samApp.controller('HomeController', ['$scope', ($scope) => {
       name: 'Mapplication',
       url: 'www.samheutmaker.com',
       image: 'http://www.samheutmaker.com/img/1.jpg',
-      date: 'Date',
+      date: '2015',
       tags: ['gelocation', 'cordova', 'javascript', 'google maps',
         'mapping'
       ],
       desc: 'A geolocation tagging web app built in Javascript and Cordova.'
-    }, {
-      name: 'Mapplication',
-      url: 'www.samheutmaker.com',
+    },{
+      name: 'node-live-stream',
+      url: 'https://github.com/samheutmaker/node-live-stream',
       image: 'http://www.samheutmaker.com/img/1.jpg',
-      date: 'Date',
-      tags: ['gelocation', 'cordova', 'javascript', 'google maps',
-        'mapping'
+      date: '2016',
+      tags: ['node', 'ffmpeg', 'live streaming',
       ],
-      desc: 'A geolocation tagging web app built in Javascript and Cordova.'
-    }, {
-      name: 'Mapplication',
-      url: 'www.samheutmaker.com',
+      desc: 'A node app that streams video from an IP camera to your browser'
+    },{
+      name: 'Notify',
+      url: 'https://github.com/forevernote/notify.git',
       image: 'http://www.samheutmaker.com/img/1.jpg',
-      date: 'Date',
-      tags: ['gelocation', 'cordova', 'javascript', 'google maps',
-        'mapping'
+      date: '2016',
+      tags: ['meanstack', 'notes', 'evernote', 'leaflet',
       ],
-      desc: 'A geolocation tagging web app built in Javascript and Cordova.'
+      desc: 'An online journal built with the MEAN stack'
     }],
-    [{
-      name: 'Mapplication',
-      url: 'www.samheutmaker.com',
-      image: 'http://www.samheutmaker.com/img/1.jpg',
-      date: 'Date',
-      tags: ['gelocation', 'cordova', 'javascript', 'google maps',
-        'mapping'
-      ],
-      desc: 'A geolocation tagging web app built in Javascript and Cordova.'
-    }, {
-      name: 'Mapplication',
-      url: 'www.samheutmaker.com',
-      image: 'http://www.samheutmaker.com/img/1.jpg',
-      date: 'Date',
-      tags: ['gelocation', 'cordova', 'javascript', 'google maps',
-        'mapping'
-      ],
-      desc: 'A geolocation tagging web app built in Javascript and Cordova.'
-    }, {
-      name: 'Mapplication',
-      url: 'www.samheutmaker.com',
-      image: 'http://www.samheutmaker.com/img/1.jpg',
-      date: 'Date',
-      tags: ['gelocation', 'cordova', 'javascript', 'google maps',
-        'mapping'
-      ],
-      desc: 'A geolocation tagging web app built in Javascript and Cordova.'
-    }]
   ];
 }])

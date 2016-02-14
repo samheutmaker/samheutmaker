@@ -8,6 +8,11 @@ html, body {
   margin: 0px;
   font-family: clean !important; }
 
+a {
+  color: black; }
+  a:link, a:visited {
+    color: black; }
+
 nav {
   position: relative;
   height: 80px;
@@ -76,10 +81,12 @@ nav {
       height: 100%;
       margin: 0 auto;
       font-family: clean;
+      color: white !important;
       background-color: #76A9E5;
-      transition: all 0.5s; }
+      transition: all 0.3s; }
       .work-container .work-item-box .work-item:hover {
         background-color: #ecf0f1;
+        color: black !important;
         cursor: pointer; }
       .work-container .work-item-box .work-item .work-item-preview {
         position: absolute;
@@ -94,21 +101,22 @@ nav {
             cursor: pointer; }
         .work-container .work-item-box .work-item .work-item-preview .work-item-desc {
           position: relative;
-          font-size: 24px; }
+          font-size: 20px; }
       .work-container .work-item-box .work-item .work-item-view {
         position: absolute;
-        height: 45px;
+        height: 40px;
         width: 160px;
         background-color: #ecf0f1;
         bottom: 80px;
         left: calc((100% - 160px)/2);
         text-align: center;
-        text-transform: capitalize;
-        padding-top: 10px;
-        font-size: 26px; }
+        text-transform: uppercase;
+        padding-top: 20px;
+        font-size: 16px;
+        letter-spacing: 1px; }
 
 .contact-container {
   position: absolute;
-  height: 400px;
+  height: 200px;
   width: 100%;
   background-color: #ecf0f1; }
