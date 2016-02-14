@@ -75,16 +75,12 @@ nav {
       width: 90%;
       height: 100%;
       margin: 0 auto;
-      font-family: clean; }
-      .work-container .work-item-box .work-item .work-item-image {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-color: #76A9E5;
-        transition: all 0.5s; }
-        .work-container .work-item-box .work-item .work-item-image:hover {
-          background-color: #a1c4ed;
-          cursor: pointer; }
+      font-family: clean;
+      background-color: #76A9E5;
+      transition: all 0.5s; }
+      .work-container .work-item-box .work-item:hover {
+        background-color: #ecf0f1;
+        cursor: pointer; }
       .work-container .work-item-box .work-item .work-item-preview {
         position: absolute;
         top: 0px;
@@ -99,3 +95,20 @@ nav {
         .work-container .work-item-box .work-item .work-item-preview .work-item-desc {
           position: relative;
           font-size: 24px; }
+      .work-container .work-item-box .work-item .work-item-view {
+        position: absolute;
+        height: 45px;
+        width: 160px;
+        background-color: #ecf0f1;
+        bottom: 80px;
+        left: calc((100% - 160px)/2);
+        text-align: center;
+        text-transform: capitalize;
+        padding-top: 10px;
+        font-size: 26px; }
+
+.contact-container {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  background-color: #ecf0f1; }

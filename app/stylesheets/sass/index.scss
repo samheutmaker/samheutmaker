@@ -101,22 +101,28 @@ nav {
             height: 100%;
             margin: 0 auto;
             font-family: clean;
-
-
-            // border: 1px solid rgba(0,0,0,0.4);
-
-            .work-item-image {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                background-color: #76A9E5;
-                transition: all 0.5s;
-
-                &:hover {
-                    background-color: lighten(#76A9E5, 10%);
-                    cursor: pointer;
-                }
+            background-color: #76A9E5;
+            transition: all 0.5s;
+            &:hover {
+                background-color: #ecf0f1;
+                cursor: pointer;
             }
+
+
+            
+
+            // .work-item-image {
+            //     position: relative;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: #76A9E5;
+            //     transition: all 0.5s;
+
+            //     &:hover {
+            //         background-color: #ecf0f1;
+            //         cursor: pointer;
+            //     }
+            // }
 
             .work-item-preview {
                 position: absolute;
@@ -128,7 +134,7 @@ nav {
                 .work-item-title {
                     position: relative;
                     width: 100%;
-                    
+
                     font-size: 30px;
 
                     &:hover {
@@ -140,7 +146,28 @@ nav {
                 	position: relative;
                 	font-size: 24px;
                 }
+
             }
+            .work-item-view {
+                  position: absolute;
+                  height: 45px;
+                  width: 160px;
+                  background-color: #ecf0f1;
+                  bottom: 80px;
+                  left: calc((100% - 160px)/2);
+                  text-align: center;
+                  text-transform: capitalize;
+                  padding-top: 10px;
+                  font-size: 26px;
+                  
+                }
         }
     }
+}
+
+.contact-container{
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    background-color: #ecf0f1;
 }
