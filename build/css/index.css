@@ -21,49 +21,74 @@ nav {
   left: 0px;
   margin: 0px 0px 0px 0px;
   background-color: white; }
+  nav .nav-logo {
+    width: 60%; }
+  nav .nav-button-container {
+    width: 40%; }
   nav .nav-section {
     position: relative;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    float: left;
-    width: 50%; }
+    float: left; }
     nav .nav-section .logo {
       letter-spacing: 0px;
       font-weight: normal;
-      margin: 22px 0px 0px 100px;
+      margin: 22px 0px 0px 20px;
       font-family: clean !important;
       font-weight: bold;
-      font-size: 24px;
-      color: #172126; }
+      font-size: 20px;
+      color: #172126;
+      transition: all 0.3s; }
     nav .nav-section .title {
       color: #76A9E5;
-      font-size: 22px;
+      font-size: 18px;
       opacity: 0.7;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      transition: all 0.3s; }
+    @media screen and (min-width: 960px) {
+      nav .nav-section .logo {
+        font-size: 24px;
+        margin: 22px 0px 0px 100px; }
+      nav .nav-section .title {
+        font-size: 22px; } }
     nav .nav-section ul.nav-list {
       position: absolute;
       right: 0px;
       list-style: none;
-      margin: 25px 100px 0px 0px;
+      margin: 25px 20px 0px 0px;
       font-family: clean !important;
       font-weight: 600; }
       nav .nav-section ul.nav-list li {
         margin: 0px 0px 0px 20px;
         color: #172126;
-        font-size: 20px;
+        font-size: 16px;
         letter-spacing: 0px;
         float: left;
         transition: all 0.3s; }
         nav .nav-section ul.nav-list li:hover, nav .nav-section ul.nav-list li:active {
           cursor: pointer;
           color: #76A9E5; }
+      @media screen and (min-width: 960px) {
+        nav .nav-section ul.nav-list {
+          margin: 25px 100px 0px 0px; }
+          nav .nav-section ul.nav-list li {
+            font-size: 20px; } }
 
 .content-container {
   position: relative;
   height: 650px;
   width: 100%;
   background-color: #76A9E5; }
+  .content-container .message {
+    font-size: 160px;
+    font-family: clean;
+    text-align: center;
+    color: white;
+    transition: all 0.3s; }
+    @media screen and (min-width: 960px) {
+      .content-container .message {
+        font-size: 220px; } }
 
 .work-container {
   position: relative;
@@ -72,7 +97,7 @@ nav {
   padding-top: 3.3333%; }
   .work-container .work-item-box {
     position: relative;
-    height: 500px;
+    height: 540px;
     margin: 0 auto;
     margin-bottom: 3.3333%; }
     .work-container .work-item-box .work-item {

@@ -10,10 +10,11 @@ html, body {
     font-family: clean !important;
 }
 
-a{
+a {
     color: black;
+
     &:link, &:visited {
-        color: black
+        color: black;
     }
 }
 
@@ -30,30 +31,54 @@ nav {
     // border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
     // Nav Sections
+
+    .nav-logo {
+        width: 60%;
+    }
+
+    .nav-button-container {
+        width: 40%;
+    }
+
     .nav-section {
         position: relative;
         height: 100%;
         margin: 0px;
         padding: 0px;
         float: left;
-        width: 50%;
 
         // Logo
         .logo {
             letter-spacing: 0px;
             font-weight: normal;
-            margin: 22px 0px 0px 100px;
+            margin: 22px 0px 0px 20px;
             font-family: clean !important;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 20px;
             color: #172126;
+            transition: all 0.3s;
         }
 
         .title {
             color: #76A9E5;
-            font-size: 22px;
+            font-size: 18px;
             opacity: 0.7;
             text-transform: capitalize;
+            transition: all 0.3s;
+        }
+
+        // Logo
+        @media screen and (min-width: 960px) {
+
+
+            .logo {
+                font-size: 24px;
+                margin: 22px 0px 0px 100px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
         }
 
         // Navigation
@@ -61,7 +86,7 @@ nav {
             position: absolute;
             right: 0px;
             list-style: none;
-            margin: 25px 100px 0px 0px;
+            margin: 25px 20px 0px 0px;
             font-family: clean !important;
             font-weight: 600;
 
@@ -69,7 +94,7 @@ nav {
             li {
                 margin: 0px 0px 0px 20px;
                 color: #172126;
-                font-size: 20px;
+                font-size: 16px;
                 letter-spacing: 0px;
                 float: left;
                 transition: all 0.3s;
@@ -77,6 +102,15 @@ nav {
                 &:hover, &:active {
                     cursor: pointer;
                     color: #76A9E5;
+                }
+            }
+
+            // Navigation
+            @media screen and (min-width: 960px) {
+                margin: 25px 100px 0px 0px;
+
+                li {
+                    font-size: 20px;
                 }
             }
         }
@@ -88,6 +122,18 @@ nav {
     height: 650px;
     width: 100%;
     background-color: #76A9E5;
+
+    .message{
+        font-size: 160px;
+        font-family: clean;
+        text-align: center;
+        color: white;
+        transition: all 0.3s;
+
+        @media screen and (min-width: 960px) {
+            font-size: 220px;
+        }
+    }
 }
 
 .work-container {
@@ -98,7 +144,7 @@ nav {
 
     .work-item-box {
         position: relative;
-        height: 500px;
+        height: 540px;
         margin: 0 auto;
         margin-bottom: 3.3333%;
 
@@ -111,14 +157,12 @@ nav {
             color: white !important;
             background-color: #76A9E5;
             transition: all 0.3s;
+
             &:hover {
                 background-color: #ecf0f1;
                 color: black !important;
                 cursor: pointer;
             }
-
-
-            
 
             // .work-item-image {
             //     position: relative;
@@ -139,11 +183,9 @@ nav {
                 top: 100px;
                 padding: 40px;
 
-
                 .work-item-title {
                     position: relative;
                     width: 100%;
-
                     font-size: 30px;
 
                     &:hover {
@@ -151,31 +193,30 @@ nav {
                     }
                 }
 
-                .work-item-desc{
-                	position: relative;
-                	font-size: 20px;
+                .work-item-desc {
+                    position: relative;
+                    font-size: 20px;
                 }
-
             }
+
             .work-item-view {
-                  position: absolute;
-                  height: 40px;
-                  width: 160px;
-                  background-color: #ecf0f1;
-                  bottom: 80px;
-                  left: calc((100% - 160px)/2);
-                  text-align: center;
-                  text-transform: uppercase;
-                  padding-top: 20px;
-                  font-size: 16px;
-                  letter-spacing: 1px;
-                  
-                }
+                position: absolute;
+                height: 40px;
+                width: 160px;
+                background-color: #ecf0f1;
+                bottom: 80px;
+                left: calc((100% - 160px)/2);
+                text-align: center;
+                text-transform: uppercase;
+                padding-top: 20px;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
         }
     }
 }
 
-.contact-container{
+.contact-container {
     position: absolute;
     height: 200px;
     width: 100%;

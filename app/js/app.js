@@ -5,20 +5,43 @@ require('angular-route');
 var samApp = angular.module('samApp', ['ngAnimate', 'ngRoute']);
 
 
-samApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
+samApp.config(['$routeProvider', '$locationProvider',
+  function($routeProvider,
     $locationProvider) {
 
-  $locationProvider.html5Mode(true);
-}])
+    $locationProvider.html5Mode(true);
+  }
+])
 
 
-samApp.controller('HomeController', ['$scope', '$location', '$anchorScroll', 
-  ($scope, $location, $anchorScroll) => {
+samApp.controller('HomeController', ['$scope', '$location', '$anchorScroll', '$window', ($scope, $location, $anchorScroll, $window) => {
 
-  $scope.goToHash = function(url){
+  $scope.goToHash = function(url) {
     $location.hash(url);
     $anchorScroll();
   }
+
+  
+
+  $scope.fullSize = {
+    name: 'Samuel Heutmaker',
+    title: 'Fullstack Developer',
+    full: true
+  }
+  $scope.smallSize = {
+    name: 'SH',
+    title: 'Fullstack',
+    full: false
+  }
+  
+  $scope.display = $scope.fullSize;
+
+  angular.element($window).bind('resize', function() {
+    $scope.$apply(function() {
+      $scope.display = ($window.innerWidth < 769) ? 
+      $scope.smallSize :  $scope.fullSize;
+    });
+  })
 
   $scope.workItems = [
     [{
@@ -56,21 +79,19 @@ samApp.controller('HomeController', ['$scope', '$location', '$anchorScroll',
         'mapping'
       ],
       desc: 'A geolocation tagging web app built in Javascript and Cordova.'
-    },{
+    }, {
       name: 'node-live-stream',
       url: 'https://github.com/samheutmaker/node-live-stream',
       image: 'http://www.samheutmaker.com/img/1.jpg',
       date: '2016',
-      tags: ['node', 'ffmpeg', 'live streaming',
-      ],
+      tags: ['node', 'ffmpeg', 'live streaming', ],
       desc: 'A node app that streams video from an IP camera to your browser'
-    },{
+    }, {
       name: 'Notify',
       url: 'https://github.com/forevernote/notify.git',
       image: 'http://www.samheutmaker.com/img/1.jpg',
       date: '2016',
-      tags: ['meanstack', 'notes', 'evernote', 'leaflet',
-      ],
+      tags: ['meanstack', 'notes', 'evernote', 'leaflet', ],
       desc: 'An online journal built with the MEAN stack'
     }],
   ];
