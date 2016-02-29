@@ -69,8 +69,6 @@ nav {
 
         // Logo
         @media screen and (min-width: 960px) {
-
-
             .logo {
                 font-size: 24px;
                 margin: 22px 0px 0px 100px;
@@ -123,7 +121,7 @@ nav {
     width: 100%;
     background-color: #76A9E5;
 
-    .message{
+    .message {
         font-size: 160px;
         font-family: clean;
         text-align: center;
@@ -221,4 +219,20 @@ nav {
     height: 200px;
     width: 100%;
     background-color: #ecf0f1;
+
+    .email {
+        height: 40px;
+        position: relative;
+        top: 80px;
+        font-size: 24px;
+        left: 3.33%;
+
+        @media screen and (max-width: 1024px) {
+        left: 6.66%;
+        }
+
+        .intro {
+            font-weight: bold;
+        }
+    }
 }
