@@ -100,14 +100,14 @@
 	      ],
 	      desc: 'MajorA is Connect middleware for user authentication, authorization, administration, and analytics.'
 	    }, {
-	      name: 'EventList',
-	      url: 'www.samheutmaker.com',
+	      name: 'HyperLocal API',
+	      url: 'https://github.com/samheutmaker/hyper-local-api',
 	      image: 'http://www.samheutmaker.com/img/1.jpg',
 	      date: '2015 - Current',
 	      tags: ['meanstack', 'web crawling', 'hyperlocal', 'geolocation',
 	        'events'
 	      ],
-	      desc: ' EventList is a web app that scrapes event data from around the Seattle area and displays it in a formatted and easily searchable manner.'
+	      desc: ' The HyperLocal API is a JSON REST API that serves data about events around the Seattle area. Over 3,000 events in the next six months.'
 	    }, {
 	      name: 'Maker & Meeks',
 	      url: 'https://github.com/samheutmaker/maker-meeks-new',
