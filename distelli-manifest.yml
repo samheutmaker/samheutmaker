@@ -22,10 +22,9 @@ samheutmaker/samheutmaker-blog:
     - npm install
 
 
-  Start:
+  Exec:
     - sudo rm -rf /etc/nginx/sites-available/fire
     - sudo mv fire /etc/nginx/sites-available/fire
     - sudo ln -sf /etc/nginx/sites-available/fire /etc/nginx/sites-enabled/fire
     - sudo service nginx restart -y
     - node server.js
-    - node server2.js
