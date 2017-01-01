@@ -1,8 +1,8 @@
 server {
     listen 443 ssl;
     server_name samheutmaker.com;
-    ssl_certificate /etc/letsencrypt/live/samheutmaker/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/samheutmaker/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/samheutmaker.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/samheutmaker.com/privkey.pem;
      ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_prefer_server_ciphers on;
         ssl_dhparam /etc/ssl/certs/dhparam.pem;
@@ -24,37 +24,37 @@ server {
 
 server {
     listen 443 ssl;
-    server_name www.samheutmaker;
+    server_name www.samheutmaker.com;
 
-    return 301 https://samheutmaker$request_uri;
+    return 301 https://samheutmaker.com$request_uri;
 }
 
 server {
     listen 80;
-    server_name samheutmaker www.samheutmaker;
+    server_name samheutmaker.com www.samheutmaker.com;
 
-    return 301 https://samheutmaker$request_uri;
+    return 301 https://samheutmaker.com$request_uri;
 }
 
 server {
     listen 80;
     server_name 52.33.216.32;
 
-    return 301 https://samheutmaker$request_uri;
+    return 301 https://samheutmaker.com$request_uri;
 }
 
 server {
     listen 443 ssl;
     server_name 52.33.216.32;
 
-    return 301 https://samheutmaker$request_uri;
+    return 301 https://samheutmaker.com$request_uri;
 }
 
 server {
     listen 443 ssl;
     server_name blog.samheutmaker.com;
-    ssl_certificate /etc/letsencrypt/live/samheutmaker/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/samheutmaker/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/samheutmaker.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/samheutmaker.com/privkey.pem;
      ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
         ssl_prefer_server_ciphers on;
         ssl_dhparam /etc/ssl/certs/dhparam.pem;
@@ -78,6 +78,6 @@ server {
     listen 80;
     server_name blog.samheutmaker.com;
 
-    return 301 https://blog.samheutmaker$request_uri;
+    return 301 https://blog.samheutmaker.com$request_uri;
 }
 
