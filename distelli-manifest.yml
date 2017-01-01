@@ -28,4 +28,3 @@ samheutmaker/samheutmaker-blog:
     - sudo ln -sf /etc/nginx/sites-available/fire /etc/nginx/sites-enabled/fire
     - sudo service nginx restart -y
     - node server.js
-    - node server2.js
