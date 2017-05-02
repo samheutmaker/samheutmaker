@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Copy /content to /passly/marketing-site-<GUID>
+
+PASSLY_CONTENT=$(cat passly_content.name)
+echo "Using PASSLY_CONTENT=$PASSLY_CONTENT"
+
+if [[ -z "$PASSLY_CONTENT" ]]
+then
+   echo "PASSLY_CONTENT env variable not specified as first arg"
+   exit 1
+fi
+
+echo "CMD: ---- mkdir -p /marketing-site/$PASSLY_CONTENT"
+mkdir -p /marketing-site/$PASSLY_CONTENT
+
+echo "CMD: ---- rsync -avr /public /marketing-site/$PASSLY_CONTENT"
+rsync -avr /public /marketing-site/$PASSLY_CONTENT
+
+# echo "CMD: ---- ln -sfn $PASSLY_CONTENT /marketing-site/marketing-site"
+ln -sfn $PASSLY_CONTENT /marketing-site/marketing-site
+
+echo "Starting infinite loop..."
+
+while true
+do
+    sleep 10000
+done
