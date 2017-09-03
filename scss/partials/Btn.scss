@@ -36,7 +36,7 @@
 }
 
 .Btn {
-    background-color: $salmon;
+    background-color: $pink;
     color: #FFFFFF;
     text-align: center;
     display: flex;
@@ -58,7 +58,7 @@
 
     &:active {
         margin-top: 1px;
-        background-color: darken($salmon, 5%);
+        background-color: darken($pink, 5%);
     }
 
     i {
